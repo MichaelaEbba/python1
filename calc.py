@@ -29,16 +29,22 @@ def print_calc(number):
     else:
         print("Nope")
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+main_loop = True
+while main_loop:
+    print("Press e to Exit")
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
 
-operator = input("Enter operator: ")
-if operator == "+":
-    print_calc(result_calc_add(num1, num2))
-if operator == "-":
-    print_calc(result_calc_sub(num1, num2))
-if operator == "*":
-    print_calc(result_calc_mult(num1, num2))
-if operator == "/":
-    print_calc(result_calc_div(num1, num2))
+    operator = input("Enter operator: ")
+    if operator == "+":
+        print_calc(result_calc_add(num1, num2))
+    if operator == "-":
+        print_calc(result_calc_sub(num1, num2))
+    if operator == "*":
+        print_calc(result_calc_mult(num1, num2))
+    if operator == "/":
+        print_calc(result_calc_div(num1, num2))
+    if operator == "e":
+        main_loop = False
+
 
